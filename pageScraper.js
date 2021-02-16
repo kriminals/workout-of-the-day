@@ -1,8 +1,8 @@
 const scraperObject = {
-    url: 'https://www.boosterfitness.gr/',
+    url: 'https://www.boosterfitness.gr',
     async scraper(browser, date){
         let page = await browser.newPage();
-        console.log(`Navigating to ${this.url}...`);
+        console.log(`Navigating to ${this.url}/${date}/...`);
         await page.goto(`${this.url}/${date}/`, {
             waitUntil: 'load',
             // Remove the timeout
